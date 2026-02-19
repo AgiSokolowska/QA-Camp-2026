@@ -1,5 +1,5 @@
 # QA-Camp-2026
-Project to learn automation in playwright. 
+Project to learn automation in playwright. <br/>
 URL: [Howlingtesters](https://howlingtesters.pl/party/)
 
 ## Prepare enviroment
@@ -19,7 +19,7 @@ git clone "page adress"
 3. Go to repository folder
 
 ```
-cd QA-CAMP-2025
+cd QA-CAMP-2026
 ```
 
 4. Install playwright
