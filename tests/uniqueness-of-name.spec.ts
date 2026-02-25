@@ -1,6 +1,6 @@
 import { test } from '../page-object-model/fixtures/howling-test.fixture';
 
-test('Unikalność imienia', async ({ homePage }) => {
+test('Protecting the uniqueness of the name', async ({ homePage }) => {
   
   const name1 = 'Bohater';
   const name2 = 'bohater';
