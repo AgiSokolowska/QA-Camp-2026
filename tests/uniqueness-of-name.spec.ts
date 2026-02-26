@@ -4,7 +4,7 @@ test('Protecting the uniqueness of the name', async ({ homePage }) => {
   
   const name1 = 'Bohater';
   const name2 = 'bohater';
-  const role = 'Wojownik';
+  const role = 'Warrior';
   const powers1 = ['20', '15', '10', '10'];
   const powers2 = ['15', '15', '10', '15']
 

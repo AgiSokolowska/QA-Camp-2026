@@ -8,6 +8,20 @@ export class HomePageObject extends BasePageObject {
     await this.toHaveTitle('party - Howling Testers');
   }
 
+  async clearLocalStorage() {
+  this.page.evaluate(()=> {
+  localStorage.clear();
+});
+  }
+
+
+  async writeTheContentOfLocalStorage() {
+   const storage = await this.page.evaluate(() => {
+  return { ...localStorage };
+  });
+console.log("LOCAL STORAGE:", storage); 
+  }
+
   async clickAcceptButton() {
     await this.page.getByRole('button', { name: 'Accept All' }).click();
   }
@@ -17,7 +31,7 @@ export class HomePageObject extends BasePageObject {
   }
 
   async fillName(name: string) {
-    await this.page.getByRole('textbox', { name: 'Imię postaci:' }).fill(name);
+    await this.page.getByRole('textbox', { name: 'Character name:' }).fill(name);
   }
 
   async chooseRole(role: string) {
@@ -25,20 +39,20 @@ export class HomePageObject extends BasePageObject {
   }
 
   async fillPowers(powers: string[]) {
-    await this.page.getByRole('spinbutton', { name: 'Siła:' }).fill(powers[0]);
-    await this.page.getByRole('spinbutton', { name: 'Spryt:' }).fill(powers[1]);
-    await this.page.getByRole('spinbutton', { name: 'Energia:' }).fill(powers[2]);
-    await this.page.getByRole('spinbutton', { name: 'Zdrowie:' }).fill(powers[3]);
+    await this.page.getByRole('spinbutton', { name: 'Strength:' }).fill(powers[0]);
+    await this.page.getByRole('spinbutton', { name: 'Agility:' }).fill(powers[1]);
+    await this.page.getByRole('spinbutton', { name: 'Energy:' }).fill(powers[2]);
+    await this.page.getByRole('spinbutton', { name: 'Health:' }).fill(powers[3]);
   }
 
   async chceckPopup() {
-    await expect(this.page.locator('#popup-title')).toContainText('Duplikat imienia');
+    await expect(this.page.locator('#popup-title')).toContainText('Duplicate name');
     await expect(this.page.locator('#popup-message')).toContainText(
-      'Postać o tym imieniu już istnieje! Wybierz inne imię.'
+      'A character with this name already exists! Choose another name.'
     );
   }
 
   async addCharacter() {
-    await this.page.getByRole('button', { name: 'Dodaj postać' }).click();
+    await this.page.getByRole('button', { name: 'Add character' }).click();
   }
 }
