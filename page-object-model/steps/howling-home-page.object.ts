@@ -17,9 +17,13 @@ export class HomePageObject extends BasePageObject {
 
   async writeTheContentOfLocalStorage() {
    const storage = await this.page.evaluate(() => {
-  return { ...localStorage };
+    return { ...localStorage };
   });
-console.log("LOCAL STORAGE:", storage); 
+    console.log("LOCAL STORAGE:", storage); 
+  }
+
+  async refreshPage() {
+    await this.page.reload();
   }
 
   async clickAcceptButton() {
