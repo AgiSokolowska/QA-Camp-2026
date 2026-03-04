@@ -1,7 +1,7 @@
 # QA-Camp-2025
 
 Project to learn automation in playwright. URL:<br/>
-[AutomationTestStore](https://automationteststore.com)
+[Howlingtesters](https://howlingtesters.pl/party/)
 
 ## Prepare enviroment
 

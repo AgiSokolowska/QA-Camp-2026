@@ -49,7 +49,7 @@ export class HomePageObject extends BasePageObject {
     await this.page.getByRole('spinbutton', { name: 'Health:' }).fill(powers[3]);
   }
 
-  async chceckPopup() {
+  async checkPopup() {
     await expect(this.page.locator('#popup-title')).toContainText('Duplicate name');
     await expect(this.page.locator('#popup-message')).toContainText(
       'A character with this name already exists! Choose another name.'
