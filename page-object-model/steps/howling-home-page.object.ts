@@ -8,19 +8,7 @@ export class HomePageObject extends BasePageObject {
     await this.toHaveTitle('party - Howling Testers');
   }
 
-  async clearLocalStorage() {
-  this.page.evaluate(()=> {
-  localStorage.clear();
-});
-  }
 
-
-  async writeTheContentOfLocalStorage() {
-   const storage = await this.page.evaluate(() => {
-    return { ...localStorage };
-  });
-    console.log("LOCAL STORAGE:", storage); 
-  }
 
   async refreshPage() {
     await this.page.reload();

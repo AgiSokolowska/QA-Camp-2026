@@ -25,7 +25,4 @@ export class BasePageObject {
     await this.page.goto(urlToGo);
   }
 
-  async fillInputID(inputID: string, inputText: string) {
-    await this.page.fill(`input#${inputID}`, inputText);
-  }
 }
