@@ -1,6 +1,7 @@
-# QA-Camp-2026
-Project to learn automation in playwright. <br/>
-URL: [Howlingtesters](https://howlingtesters.pl/party/)
+# QA-Camp-2025
+
+Project to learn automation in playwright. URL:<br/>
+[Howlingtesters](https://howlingtesters.pl/party/)
 
 ## Prepare enviroment
 
@@ -19,7 +20,7 @@ git clone "page adress"
 3. Go to repository folder
 
 ```
-cd QA-CAMP-2026
+cd QA-CAMP-2025
 ```
 
 4. Install playwright
@@ -40,3 +41,5 @@ You can install VS Code extension: Prettier or write in console:
 ```
 npx prettier --write .
 ```
+
+
