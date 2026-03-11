@@ -39,7 +39,7 @@ npx playwright test
 
 You can install VS Code extension: Prettier or write in console:
 ```
-npx prettier --write .
+npx prettier --write 
 ```
 
 
