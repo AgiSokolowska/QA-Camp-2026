@@ -37,14 +37,35 @@ export class HomePageObject extends BasePageObject {
     await this.page.getByRole('spinbutton', { name: 'Health:' }).fill(powers[3]);
   }
 
-  async checkPopup() {
-    await expect(this.page.locator('#popup-title')).toContainText('Duplicate name');
-    await expect(this.page.locator('#popup-message')).toContainText(
-      'A character with this name already exists! Choose another name.'
-    );
+  async checkPopup(popupName: string, popupMessage: string) {
+    await expect(this.page.locator('#popup-title')).toContainText(popupName);
+    await expect(this.page.locator('#popup-message')).toContainText(popupMessage);
+  }
+
+  async closePopup() {
+    await this.page.getByRole('button', { name: 'Close' }).click();
   }
 
   async addCharacter() {
     await this.page.getByRole('button', { name: 'Add character' }).click();
   }
+
+    async clearLocalStorage() {
+  this.page.evaluate(()=> {
+  localStorage.clear();
+});
+  }
+
+  async writeTheContentOfLocalStorage() {
+   return await this.page.evaluate(() => {
+    return { ...localStorage };
+  });
+  }
+
+   async test() {
+   return await this.page.evaluate(() => {
+  return { test: "ok" };
+});
+
+   }
 }
