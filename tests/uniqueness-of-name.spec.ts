@@ -14,6 +14,6 @@ test('Protecting the uniqueness of the name', async ({ homePage }) => {
   await homePage.chooseRole(character2.role);
   await homePage.fillPowers(character2.powers);
   await homePage.addCharacter();
-  await homePage.checkPopup();
+  await homePage.checkPopup('Duplicate name', 'A character with this name already exists! Choose another name.');
   await homePage.closePage();
 });
