@@ -1,5 +1,5 @@
 {
-  "name": "qa-camp-2025",
+  "name": "qa-camp-2026",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mima-design/QA-Camp-2025.git"
+    "url": "git+https://github.com/AgiSokolowska/QA-Camp-2026"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mima-design/QA-Camp-2025/issues"
+    "url": "https://github.com/AgiSokolowska/QA-Camp-2026/issues"
   },
-  "homepage": "https://github.com/mima-design/QA-Camp-2025#readme",
+  "homepage": "https://github.com/AgiSokolowska/QA-Camp-2026#readme",
   "devDependencies": {
     "@eslint/js": "^9.29.0",
     "@playwright/test": "^1.51.0",
